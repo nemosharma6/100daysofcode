@@ -8,11 +8,12 @@ class Solution:
         
         ar = [True] * n
         
-        for i in range(2, n-1):
-            j = 2
-            while i*j < n:
-                ar[i*j] = False
-                j = j + 1
+        for i in range(2, int(math.sqrt(n)) + 1):
+            j = i
+            if ar[i] == True:
+                while i*j < n:
+                    ar[i*j] = False
+                    j = j + 1
         
         c = 0
         for i in range(2, n):
