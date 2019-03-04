@@ -8,6 +8,9 @@
 class Solution(object):
     def detectCycle(self, head):
         
+        if head is None:
+            return None
+        
         initial = True
         slow = head
         fast = head
@@ -30,4 +33,5 @@ class Solution(object):
             slow = slow.next
         
         return tmp
+        
         
